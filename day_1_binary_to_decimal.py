@@ -8,8 +8,11 @@ def to_decimal(binary):
     for index, num in enumerate(reversed(arr)):
         try:
             num = int(num)
+            if num > 1:
+                raise ValueError
         except ValueError:
-            return "Cannot convert non-numerical values to decimal"
+            print("Check input for non-binary or/and non-numerical digit and input correct value")
+            
         else:
             digit = num * (2 ** index)
             decimal += digit
