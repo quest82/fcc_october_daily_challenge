@@ -1,6 +1,8 @@
 def to_binary(decimal):
     binary = []
     num = int(decimal)
+    if num == 0:
+        return '0'
     while num > 0:
        remainder = num % 2 
        num //= 2
@@ -12,6 +14,6 @@ def to_binary(decimal):
 # OR
 
 # def to_binary(decimal):
-#     return int(str(decimal), 2)
+#     return f"{int(decimal):b}"
 
-# print(to_binary(12))
+print(to_binary(1))
