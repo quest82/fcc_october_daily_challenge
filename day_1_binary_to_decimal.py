@@ -12,7 +12,6 @@ def to_decimal(binary):
                 raise ValueError
         except ValueError:
             print("Check input for non-binary or/and non-numerical digit and input correct value")
-            
         else:
             digit = num * (2 ** index)
             decimal += digit
