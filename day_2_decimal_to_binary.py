@@ -1,14 +1,17 @@
+def to_binary(decimal):
+    binary = []
+    num = int(decimal)
+    while num > 0:
+       remainder = num % 2 
+       num //= 2
+       binary.append(str(remainder))
+    binary.reverse()
+
+    return ''.join(binary)
+
+# OR
+
 # def to_binary(decimal):
-#     binary = []
-#     num = int(decimal)
-#     while num > 0:
-#        remainder = num // 2 
-#        binary.append(remainder)
-#        print (num, remainder)
+#     return int(str(decimal), 2)
 
-#     # return binary
-
-# print(to_binary(5))
-
-remainder = 5 // 2 
-print(remainder)
+# print(to_binary(12))
