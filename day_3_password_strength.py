@@ -25,9 +25,18 @@ def check_strength(password):
 
     if has_specialchar:
         strength+=1
+    print(strength)
+    # Generate comment
+
+    if strength > 3:
+        return "strong"
+    elif strength >= 2:
+        return "medium"
+    else:
+        return "weak"
 
 
-    comment = ''
-    return strength
+    
 
-print(check_strength('1aaaaAa@'))
+
+print(check_strength("PassWord%^!"))
