@@ -8,12 +8,14 @@ def has_exoplanet(readings):
     for index, letter in enumerate(list(string.ascii_uppercase)):
         score_guide[letter] = index + 10
 
-    # Get average of readings
-    sum = 0
-    for char in readings:
-        sum += score_guide[char]
-    average = sum/len(readings) * 0.8
-    print(average)
+    # Get the readings as numbers
+    scores = [score_guide[score] for score in readings]
+
+
+    # Get threshold of readings
+    threshold = (sum(scores) / len(scores)) * 0.8
+
+    print(threshold)
 has_exoplanet("9AB98AB9BC98A")
 
 
