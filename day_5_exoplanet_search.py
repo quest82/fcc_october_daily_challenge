@@ -15,8 +15,8 @@ def has_exoplanet(readings):
     # Get threshold of readings
     threshold = (sum(scores) / len(scores)) * 0.8
 
-    print(threshold)
-has_exoplanet("9AB98AB9BC98A")
+    return any(score <= threshold for score in scores)
+print(has_exoplanet("FREECODECAMP"))
 
 
     
