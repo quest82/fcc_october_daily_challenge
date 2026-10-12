@@ -11,6 +11,6 @@ def send_message(route):
 
 
 
-    return delayed
+    return round(delayed, 4)
 
-print(send_message([1000000, 500000000, 1000000]))
+print(send_message([300000, 300000]))
