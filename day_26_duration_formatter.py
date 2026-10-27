@@ -22,5 +22,13 @@ def format(seconds):
         result_min, result_secs = time_formatter(minutes, second)
 
         return f'{hours}:{result_min}:{result_secs}'
+    else:
+        minutes = seconds // 60
+        sec = seconds % 60
+        _, result_secs = time_formatter(minutes, sec)
 
-print(format(5555))
+        return f'{minutes}:{result_secs}'
+
+
+
+print(format(500))
