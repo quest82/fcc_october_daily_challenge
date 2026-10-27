@@ -1,0 +1,15 @@
+    def time_formatter (minu, secs):
+        time=['a', 'b']
+        if (len(str(minu)) < 2):
+            
+        # if (len(str(minu)) < 2) or (len(str(secs)) < 2):
+
+        #     return [f'0{minu}', f'0{secs}']
+        # else:
+        #     return [str(minu), str(secs)]
+
+    print(time_formatter(4, 30))
+
+        result_min, result_secs = time_formatter(minutes, second)
+        
+        return f'{hours}:{result_min}:{result_secs}'
